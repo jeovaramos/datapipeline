@@ -37,7 +37,11 @@ airflow webserver
 ## 5. Acessaremos a interface do Airflow no navegador usando o link: http://localhost:8080.
 
 ## 6. E para iniciarmos o serviço Scheduler, responsável pelo agendamento de tarefas para execução, digitaremos:
+Utilize um segundo terminal com seu virtual environment ativado e exporte novamente a variável de ambiente.
 
 ```
+export AIRFLOW_HOME=$(pwd)/airflow
 airflow scheduler
 ```
+
+## 6. Usaremos uma API para extrair dados do twitter que está disponível neste (link)[https://github.com/twitterdev/Twitter-API-v2-sample-code/blob/2bd47d1ecfa31a1d71ed7902e5ac9c222d575331/Recent-Search/recent_search.py]
