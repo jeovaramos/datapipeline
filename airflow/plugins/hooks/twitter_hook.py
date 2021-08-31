@@ -36,13 +36,12 @@ class TwitterHook(HttpHook):
             else ""
         )
         url = "{}/2/tweets/search/recent?query={}&{}&{}{}{}".format(
-            self.base_url, query, tweet_fields, user_fields,
-            start_time, end_time
+            self.base_url, query, tweet_fields, user_fields, start_time, end_time
         )
         return url
 
     def connect_to_endpoint(self, url, session):
-        response = requests.request("GET", url)
+        response = requests.Request("GET", url)
         prep = session.prepare_request(response)
         self.log.info(f"URL: {url}")
 
